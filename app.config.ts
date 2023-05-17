@@ -1,26 +1,32 @@
+import { langText } from './lang/index'
+
 export default defineAppConfig({
   docus: {
-    title: 'Docus',
-    description: 'The best place to start your documentation.',
-    image: 'https://user-images.githubusercontent.com/904724/185365452-87b7ca7b-6030-4813-a2db-5e65c785bf88.png',
+    title: 'Web3Hacker.World',
+    titleTemplate: (titleChunk) => {
+      return titleChunk ? `${titleChunk} - Web3Hacker.World` : 'Web3Hacker.World';
+    },
+    description: langText.description,
+    image: '/Web3Hacker.World.jpg', // TODO
     socials: {
-      twitter: 'nuxtstudio',
-      github: 'nuxt-themes/docus'
+      twitter: 'Web3HackerWorld',
+      github: 'Web3HackerWorld'
     },
     aside: {
-      level: 0,
+      level: 1,
       exclude: []
     },
     header: {
-      logo: true
+      logo: true,
+      "fluid": false
     },
     footer: {
-      iconLinks: [
-        {
-          href: 'https://nuxt.com',
-          icon: 'simple-icons:nuxtdotjs'
-        }
-      ]
+      credits: {
+        icon: '',
+        text: '©2023 Web3Hacker.World',
+        href: 'https://Web3Hacker.World',
+      },
+      "fluid": false
     }
   }
 })
