@@ -4,6 +4,8 @@ We clone the [Docus Starter](https://github.com/nuxt-themes/docus-docs-starter) 
 
 ## Init Project
 
+*If you want to extend a private remote source, you need to add the environment variable GIGET_AUTH=<token> to provide a token.*
+
 *Please change the `your-docs-project-name` to your real name*
 
 ```bash
@@ -73,3 +75,10 @@ pnpm preview
 ---
 
 For a detailed explanation of how things work, check out [Docus](https://docus.dev).
+
+## Presets
+
+- [x] [nuxt-gtag](https://github.com/johannschopplich/nuxt-gtag#runtime-config), setup `NUXT_PUBLIC_GTAG_ID` in your `.env`
+- [x] unocss
+- [x] reactivityTransform enabled
+- [x] multiple language in content dir
