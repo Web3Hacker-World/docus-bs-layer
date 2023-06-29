@@ -1,4 +1,7 @@
+import { fileURLToPath } from 'url'
+import { dirname, join } from 'path'
 import { defaultLocale } from './lang/index.js'
+const currentDir = dirname(fileURLToPath(import.meta.url))
 
 const modules = ['@unocss/nuxt']
 
@@ -12,11 +15,11 @@ if (process.env.NUXT_PUBLIC_GTAG_ID) {
 
 export default defineNuxtConfig({
   extends: '@nuxt-themes/docus',
-  // components: {
-  //   dirs: [
-  //     '~/components',
-  //   ],
-  // },
+  components: {
+    dirs: [
+      join(currentDir, 'components'),
+    ],
+  },
   css: [
     '@unocss/reset/tailwind.css',
   ],
