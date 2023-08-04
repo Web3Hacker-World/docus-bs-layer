@@ -32,5 +32,8 @@ export default defineNuxtConfig({
     viewTransition: true,
     renderJsonPayloads: true
   },
-  modules
+  modules,
+  alias: { // fix build error
+    "vue/server-renderer": require.resolve("vue/server-renderer"),
+  },
 })
